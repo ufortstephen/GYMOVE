@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+    html {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .col,
+    .col-1,
+    .col-10,
+    .col-11,
+    .col-12,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-auto,
+    .col-lg,
+    .col-lg-1,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-auto,
+    .col-md,
+    .col-md-1,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-auto,
+    .col-sm,
+    .col-sm-1,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-auto,
+    .col-xl,
+    .col-xl-1,
+    .col-xl-10,
+    .col-xl-11,
+    .col-xl-12,
+    .col-xl-2,
+    .col-xl-3,
+    .col-xl-4,
+    .col-xl-5,
+    .col-xl-6,
+    .col-xl-7,
+    .col-xl-8,
+    .col-xl-9,
+    .col-xl-auto {
+        position: relative;
+        /* width: 100%; */
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .container-fluid,
+    .row,
+    .col- {
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar {
+        /* width: 20%; */
+        /* height: 100vh; */
+        background-color: #fff;
+    }
+
+    .mainside {
+        /* width: 80%; */
+        /* height: 100vh; */
+        background-color: #E5E5E5;
+
+    }
+
+    .name {
+        background-color: #fff;
+        height: 80px;
+        width: 100%;
+    }
+
+    h6.circle-logo {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        background-color: #2B21A6;
+        border-radius: 50%;
+        background: #2B21A6;
+        border-radius: 50px 50px 20px 55px;
+    }
+
+    h4.logo-name {
+        color: #000;
+        font-family: Kollektif;
+        letter-spacing: -0.3px;
+        font-weight: bold;
+        color: #000000;
+        font-size: larger;
+    }
+
+    h4.logo-name span {
+        color: #5569B6;
+    }
+
+    .burger {
+        position: relative;
+        top: .6rem;
+    }
+
+    .hamburger {
+        position: relative;
+        top: .8rem;
+        margin-left: auto;
+        width: 20px;
+        height: 2px;
+        background-color: #000;
+        border-radius: 5px;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: #000;
+        border-radius: 5px;
+    }
+
+    .hamburger::before {
+        left: -.4rem;
+        top: -.4rem;
+    }
+
+    .hamburger::after {
+        left: -.4rem;
+        top: 0.4rem;
+    }
+
+    .input-container {
+        background: #E9E9E9;
+        padding-top: .3rem;
+        border-radius: 20px;
+        padding: .5rem;
+    }
+
+    .input-container input {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .icons {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        background: #E9EFFF;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: .4rem;
+        margin: 0px .6rem;
+    }
+
+    .icons::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #FF9432;
+        top: 3px;
+        right: 0;
+    }
+
+    .icons img {
+        color: hsl(227, 86%, 32%);
+        background-color: transparent;
+    }
+
+    .admin p {
+        width: max-content;
+        font-size: small;
+        margin-bottom: 0;
+    }
+
+    .menu p {
+        padding-left: .5rem;
+        font-size: large;
+        font-family: Kollektif;
+        font-style: normal;
+        font-weight: bolder;
+        color: #000000;
+    }
+
+    .menu li {
+        padding: .5rem 0;
+        padding-left: .5rem;
+        margin: .5rem 0;
+        /* margin-left: 2.7rem; */
+        font-size: .9rem;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: -0.3px;
+        color: #9A9A9A;
+    }
+
+    .menu li .fa {
+        font-size: larger;
+    }
+
+    .menu li:nth-child(3) {
+        /* padding: 1rem; */
+        background: #E5E7F3;
+        border-radius: 15px 0px 0px 15px;
+        border-right: 6px solid #0B2997;
+        color: #0B2997;
+    }
+
+    .menu li img {
+        width: 1rem;
+        /* height: 20px; */
+        margin-right: 1.4rem;
+    }
+
+    .workout-btn {
+        background: #0B2997;
+        box-shadow: 0px 20px 40px rgb(11 41 151 / 20%);
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        text-align: left;
+        padding: .5rem 2rem .5rem 2rem;
+        color: #FFFFFF;
+        font-size: small;
+    }
+
+    .footer p {
+        /* font-family: Lato; */
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 28px;
+        /* margin-bottom: 0; */
+        /* or 175% */
+        /* letter-spacing: 0.1px; */
+        color: #747474;
+    }
+
+    .footer p:nth-child(2) {
+        position: relative;
+        top: -.5rem;
+    }
+
+    .plan-area {
+        border-radius: 10px;
+    }
+
+    .plan-list p {
+        font-size: small;
+    }
+
+    .buttons {
+        width: max-content;
+        padding: .5rem;
+        border-radius: 20px;
+        background: #E9E9E9;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .filter {
+        width: max-content;
+        padding: .5rem;
+        border-radius: 20px;
+        background: #0B2997;
+
+    }
+
+    .buttons button {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        margin-right: .8rem;
+        padding: .4rem;
+        font-size: small;
+    }
+
+    .button-status button:nth-child(2) {
+        background-color: #fff;
+    }
+
+    @media (max-width:550px) {
+        .column {
+            flex-direction: column-reverse;
+        }
+
+        .notifications {
+            width: max-content;
+            margin-left: auto;
+            margin-top: .7rem;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .between {
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .hide {
+            display: none !important;
+        }
+    }
+
+    @media(max-width: 998px) {
+        .input-container input {
+            display: none;
+        }
+    }
+
+
+
+    @media (min-width: 768px) and (max-width:1120px) {
+        .mainside {
+            /* background-color: #000 !important; */
+        }
+
+        h6.circle-logo {
+            display: none;
+        }
+
+        .menu li img {
+            margin-right: .4rem;
+        }
+    }
+
+    @media(min-width:1200px) {
+        .input-container {
+            width: 70%;
+            margin-right: auto;
+        }
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                <div class="name d-flex pl-4">
+                    <h6 class="circle-logo align-self-center"> </h6>
+                    <h4 class=" ml-3 logo-name align-self-center">Gy<span>move.</span></h4>
+                </div>
+                <div class="menu pt-4 pl-4">
+                    <p class="">Main Menu</p>
+                    <ul>
+                        <li>
+                            <img src="images/dashboard.png" alt=""> Dashboard
+                        </li>
+                        <li>
+                            <img src="images/stat.png" alt=""> Workout Statistics
+                        </li>
+                        <li>
+                            <img src="images/plan.png" alt=""> Workout Plan
+                        </li>
+                        <li>
+                            <img src="images/bolt.png" alt=""> Distance Map
+                        </li>
+                        <li>
+                            <img src="images/plate.png" alt=""> Diet Move Menu
+                        </li>
+                        <li>
+                            <img src="images/pie-chart.png" alt=""> Personal Brand
+                        </li>
+                    </ul>
+                </div>
+                <div class="pl-4">
+                    <button class="text-left workout-btn"><span>Create Workout</span> <span class="d-block"> Plan
+                            Now</span> </button>
+                </div>
+                <div class="mt-3 footer pl-4">
+                    <p>Gymove Figma Admin Dashboard</p>
+                    <p>c 2020 All Rights Reserved</p>
+                    <p>Made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by Peterdraw</p>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mainside">
+                <div class="name py-3">
+                    <div class="row px-5">
+                        <div class="d-flex between col-md-4 col-md-4 col-lg-3 col-xl-4 ">
+
+                            <div class="burger mr-5">
+                                <div class="hamburger"></div>
+                            </div>
+                            <div class="burger">
+                                <p class="workout-plan">Workout Plan</p>
+                            </div>
+
+                        </div>
+                        <div class="col-md-1 col-lg-3  col-xl-4">
+                            <div class="input-container hide pl-3 d-flex">
+                                <div> <i class="fa fa-search" aria-hidden="true"></i></div>
+                                <div class=""> <input type="text" name="search" id="search"
+                                        placeholder="Find something here.." class="pl-2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-lg-6 col-xl-4 d-flex justify-content-between column">
+                            <div class="d-flex notifications ">
+                                <div class="icons"><img src="images/bell.png" alt="" style="width: 21px;">
+                                    <img src="images/bell-0.png" alt="" class="d-block mr-auto ml-auto">
+                                </div>
+                                <div class="icons"><img src="images/income.png" alt="" style="width: 21px;"></div>
+                                <div class="icons"><img src="images/gift.png" alt="" style="width: 21px;"></div>
+
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class=""> <img src="images/admin.png" alt="" style="width: 45px; height: 45px;"
+                                        class="ml-3"></div>
+                                <div class="align-self-center admin mx-2">
+                                    <p>Peter Parkur</p>
+                                    <p>Super Admin</p>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="row m-4">
+                        <div class="col-12  col-sm-12 col-md-12 col-lg-8 col-xl-9 bg-white p-3 plan-area mb-4">
+                            <div class="pt-3 row ">
+                                <div class=" col-12 col-sm-5 col-md-4 bg plan-list">
+                                    <h6>Plan List</h6>
+                                    <p>Lorem Lorem Lorem Lorem Lorem, lorem</p>
+                                </div>
+                                <div
+                                    class="text-center col-12 col-sm-3  col-md-5 offset-0 offset-sm-1 offset-md-1 button-status p-1">
+
+
+                                    <div class="buttons">
+                                        <button>All</button><button>Undefinished</button><button>Finished</button>
+                                    </div>
+
+                                </div>
+                                <div class=" col-12 col-sm-3 col-md-2 offset-md-0 p-1">
+                                    <div class="filter px-3">
+                                        <img src="images/filter.png" alt="" style="width: 30%; margin-right: 1rem;">
+                                        <span>Filter</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row"></div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3  p-0 " style="background: #E9E9E9;
+                        ">
+                            <div class="ml-auto bg-white p-2 pt-1" style="width: 90%; border-radius: 20px;">
+                                <img src="images/calendar.png" alt="" style="width: 100%;">
+                            </div>
+                            <div class="mt-1 ml-4"> <img src="images/foo.png" alt="" class="mt-2" style="width: 100%;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
